@@ -14,3 +14,13 @@ h1, h2, h3 {
 body {
  font-family: Georgia, Cambria, "Times New Roman", serif;
 }
+
+#reviews {
+    border-bottom: solid 3pt #213643; 
+    color: #ED8030;
+}
+
+.first {
+    color: #728B96;
+    font-style: italic;
+}
