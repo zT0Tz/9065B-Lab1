@@ -1,5 +1,9 @@
 // JavaScript File
 
+$(document).ready(function(){
+
+});
+
 var c = 0;
 var basket=[];
 var fruits = ["apple","banana", "orange", "mango"];
@@ -60,10 +64,3 @@ function myFunction() {
     document.getElementById("demo").innerHTML = listfruit();
     
 }
-
-
-
-
-
-
-//indexOf()	Search the array for an element and returns its position
