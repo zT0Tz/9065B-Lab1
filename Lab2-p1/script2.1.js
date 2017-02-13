@@ -1,29 +1,31 @@
-// JavaScript File
 
 
+var fruitsA = ["apple","orange", "banana", "mango"];
 
-function listfruit(){ 
-    var fruits, text, fLen, i;
-    fruits = ["Apple","Banana", "Orange",  "Mango"];
-    fLen = fruits.length;
-    text = "<ul>";
-    for (i = 0; i < fLen; i++) {
-        text += "<li>" + fruits[i] + "</li>";
+$(document).ready(function(){
+
+        for(var i=0; i<fruitsA.length; i++){
+           $("#fruits").append("<li>"+fruitsA[i]+"</li>");
         }
-    text += "</ul>";
-    return text;
-}
+});
+
+$("#submit").click(function() {
+    var input = $("input").val();
+    var count = $("#fruits").children().length;
+    for (var i=0; i<count; i++){
+        var item = $("#fruits").children("li").eq(i);
+        if (input.toLowerCase() ==  item.text().toLowerCase()){
+            $("#basket").append("<li>"+item.text()+"</li>");
+            item.remove();
+            input.remove();
+            }
+    }
+});
 
 
-
-    
-    
-function findfruit() {
-   document.getElementById("p2").innerHTML = "Paragraph changed.";
-}
-
-
-
+$("#reset").click(function(){
+    location.reload();
+});
 
 
 

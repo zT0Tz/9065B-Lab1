@@ -4,41 +4,24 @@
         <title> </title>
     </head>
     <body>
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="script2.1.js"></script>        
         
 <h1>Fruit List</h1>
 
-<p id="demo"></p>
+<ul id="fruits">        </ul>
 
-<script>
-document.getElementById("demo").innerHTML = listfruit();
-</script> 
 
-<form name="pickfruit" onsubmit="validateForm()">
-  Input the fruit you want:<br> <br>
-  <input type="text" name="fruitname">
-  <br>
-  <br>
-  <input type="submit" value="Submit">
-</form> 
-<p>If you click the "Submit" button, the form-data will be sent to a page called "action_page.php".</p>
 
-<script>
-function validateForm(){
-    var x = document.forms["pickfruit"]["fruitname"].value;
-    if (x == "") {
-        alert("Name must be filled out");
-        return false;
-}
-</script>    
-
-<p id="p2">Input the fruit you want.</p>
-<button type="button" onclick="findfruit()">Confirm</button>
-<p>(myFunction is stored in an external file called "script.js")</p>
+<p>Input the fruit you want:</p> 
+<input id="input"> 
+<br></br>
+<button id = "submit"> Submit </button>
 
 
 <h1>Basket</h1>
-
+<ul id="basket">        </ul>
 
 
     </body>

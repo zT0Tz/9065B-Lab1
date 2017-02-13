@@ -17,7 +17,7 @@ function listfruit(){
 }
 
 function myFunction() {
-    var x, text, baslist, basfull, h, i, j;
+    var x, text, baslist, basfull, repeat, h, i, j;
 
     // Get the value of the input field with id="numb"
     x = document.getElementById("numb").value;
@@ -25,14 +25,15 @@ function myFunction() {
     // If x is Not a Number or less than one or greater than 10
     if (x =="apple" || x =="banana" || x =="orange" || x =="mango") {
         text = "OK";
-        
+        document.getElementById("demo2").innerHTML = text;
         if( c > 3){ 
             basfull="basket is full";
             document.getElementById("demo3").innerHTML = basfull;
         }else{
             for (i=0; i<=c; i++){
                 if(x==basket[i]){
-                    basfull="you have already picked this";
+                    repeat = "you have already picked this";
+                    document.getElementById("demo2").innerHTML = repeat;
                     break;
                 }
             }
@@ -42,6 +43,8 @@ function myFunction() {
                         if(x == fruits[h])
                         break;
                     }
+                    //var pos = fruits.indexOf(x);
+                    //var removedItems = fruits.splice(pos, pos);
                     fruits[h] = null;
                     c++;
                 }
@@ -49,8 +52,8 @@ function myFunction() {
          }
     } else {
         text = "Input not valid";
+        document.getElementById("demo2").innerHTML = text;
      }
-    document.getElementById("demo2").innerHTML = text;
     baslist = "<ul>";
     for (j = 0; j <c ; j++) {
          baslist += "<li>" + basket[j] + "</li>";

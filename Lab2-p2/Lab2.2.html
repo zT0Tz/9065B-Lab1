@@ -1,29 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="Lab2.2.js"></script>
+        <title> </title>
+    <meta charset="utf-8">
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="Lab2.2.js"></script>  
     </head>
+    
     <body>
-<h1>Fruit List</h1>
-
-<p id="demo"></p>
-<script>
-document.getElementById("demo").innerHTML = listfruit();
-</script>
-
-
-<p>Please input the fruit you want:</p>
-<input id="numb">
-<button type="button" onclick="myFunction()">Submit</button>
-<p id="demo2"></p>
-
-
-
-<h1>Basket</h1>
-<p id="demo3"></p>
-<p id="demo4"></p>
-
-
+          
+        <h1>Fruit List</h1>
+        <ul id="fruits">        </ul>
+        
+        <p>Input the fruit you want:</p> 
+        <input type="text" id="input"> 
+        <br></br>
+        <button id = "submit"> Submit </button>
+        
+        <h1>Basket</h1>
+        <ul id="mybasket">        </ul>
+    
     </body>
 </html>
